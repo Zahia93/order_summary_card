@@ -1,84 +1,100 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  /*background-color: #78c0dd; */
   background-image : url(/images/pattern-background-desktop.svg);
   background-color : hsl(225, 100%, 94%);
-}
-img.banner {
-  border-radius: 25px 25px 0 0;
-}
-div.all-group {
-  display:block;
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 25px;
-  width: 450px;
-  margin: 50px 450px;
-}
-div.summary {
-  font-family:"red hat display";
-  font-size: large;
-  margin: 30px;
-  text-align:center;
-}
-p.order-summary {
-  margin: 40px;
-  color: rgb(146, 142, 142);
-}
-div.plan  {
-  font-family:"red hat display";
-  border: azure solid;
-  border-radius: 25px;
-  margin: 10px 30px 0px 30px;
-  background-color: azure;
-  display: block;
-  margin-bottom: 100px;
-}
-div.payment-option {
-  display: block;
-  margin: 0px 20px 50px 20px;
-}
-a.change {
-  position: relative;
-  bottom: 50px;
-  left: 320px;
-  font-weight: bolder;
-}
- img.music {
-  position: relative;
-  bottom: 30px;
-}
-p1{
-  font-weight: bold;
+  font-family: 'Red Hat Display', sans-serif;
+  /*set the content to flex and center it in the middle of the web page*/
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-p.main {
-  text-align: center;
-  position: relative;
-  top: 20px;
-}
-p2 {
-  color: grey;
-}
-div.payment-option {
-  font-family:"red hat display";
-}
-button.payment {
- border: solid blue 10px;
- border-radius: 25px;
-  background-color: blue;
-  color: white;
-  font-size: large;
-  font:bold;
-  margin-left: 100px;
-  
-}
-button.cancel {
-  border: solid white 10px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
   border-radius: 25px;
-   background-color: white;
-   color: grey;
-   font-size: small;
-   margin-left: 150px;
-   font:bold
- }
- 
+  background-color: white;
+  box-shadow: 0px 10px 20px hsl(227, 21%, 78%); /*set shadow at the bottom*/
+}
+.banner {
+  border-radius: 25px 25px 0 0; /*set the radius border for only the top corners of the image*/
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-summary {
+  width:300px;
+  text-align: center;
+  color: hsl(224, 23%, 55%);
+}
+.plan {
+  width: 80%;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid hsl(225, 100%, 98%);
+  border-radius: 10px;
+  background-color: hsl(225, 100%, 98%) ;
+}
+
+.annual-plan-price {
+  position: relative;
+  right: 20px;
+}
+.change:link {
+  font-weight: bold;  
+}
+.change:hover {
+  color:hsl(224, 23%, 55%);
+  text-decoration-line: none;
+}
+.main {
+  font-weight: 900;
+}
+.price {
+  color: hsl(224, 23%, 55%);
+}
+.payment-option {
+  display: flex;
+  flex-direction: column;
+}
+.payment {
+  margin-top: 30px;
+  border-style: none;
+  border-radius: 10px;
+  background-color: hsl(245, 75%, 52%);
+  cursor:pointer;
+  color: white;
+  font-weight: 900;
+  padding: 10px 100px;
+  box-shadow: 0px 10px 20px hsl(227, 21%, 78%);
+}
+.payment:hover{
+  background-color: hsl(224, 62%, 62%) ;
+  box-shadow: 0px 10px 20px hsl(227, 21%, 78%);
+}
+.cancel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  color: hsl(223, 23%, 55%);
+  font-weight: 900;
+}
+.cancel:hover {
+  color:hsl(223, 47%, 23%);
+}
+.attribution{
+  margin-top: 20px;
+  font-size: 0.7em;
+}
